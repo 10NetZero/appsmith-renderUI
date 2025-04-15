@@ -61,4 +61,12 @@ EXPOSE 80
 EXPOSE 443
 ENTRYPOINT [ "/opt/appsmith/entrypoint.sh" ]
 HEALTHCHECK --interval=15s --timeout=15s --start-period=45s CMD "/opt/appsmith/healthcheck.sh"
-CMD ["/usr/bin/supervisord", "-n"]
+
+# Fix Render's permission issues with Caddy
+RUN chmod +x /opt/caddy/caddy
+
+# Start Appsmith manually
+CMD ["/opt/appsmith/entrypoint.sh"]
+
+
+
