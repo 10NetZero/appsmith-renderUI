@@ -1,5 +1,5 @@
 ARG BASE
-FROM ${BASE}
+FROM appsmith/appsmith-ce
 
 ENV IN_DOCKER=1
 
