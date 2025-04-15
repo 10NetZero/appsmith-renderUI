@@ -30,10 +30,10 @@ RUN <<END
 END
 
 # Add client UI - Application Layer
-COPY ./app/client/build editor/
+# COPY ./app/client/build editor/
 
 # Add RTS - Application Layer
-COPY ./app/client/packages/rts/dist rts/
+# COPY ./app/client/packages/rts/dist rts/
 
 ENV PATH /opt/bin:/opt/java/bin:/opt/node/bin:$PATH
 
